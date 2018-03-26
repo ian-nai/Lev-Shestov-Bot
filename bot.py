@@ -6,10 +6,6 @@ import tweepy
 import config
 import time
 
-CONSUMER_KEY = config.c_key
-CONSUMER_SECRET = config.c_secret
-ACCESS_KEY = config.a_key
-ACCESS_SECRET = config.a_secret
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth)
