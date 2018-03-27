@@ -6,8 +6,8 @@ import tweepy
 import config
 import time
 
-auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
-auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
+auth = tweepy.OAuthHandler(process.env.CONSUMER_KEY, process.env.CONSUMER_SECRET)
+auth.set_access_token(process.env.ACCESS_KEY, process.env.ACCESS_SECRET)
 api = tweepy.API(auth)
 
 def sentence_split():
