@@ -5,12 +5,12 @@ from random import sample
 from nltk.tokenize import sent_tokenize
 import tweepy
 import time
-from boto.s3.connection import S3Connection
 
-CONSUMER_KEY = S3Connection(os.environ['CONSUMER_KEY'])
-CONSUMER_SECRET = S3Connection(os.environ['CONSUMER_SECRET'])
-ACCESS_KEY = S3Connection(os.environ['ACCESS_KEY'])
-ACCESS_SECRET = S3Connection(os.environ['ACCESS_SECRET'])
+
+CONSUMER_KEY = os.environ.get('CONSUMER_KEY') 
+CONSUMER_SECRET = os.environ.get('CONSUMER_SECRET')
+ACCESS_KEY = os.environ.get('ACCESS_KEY')
+ACCESS_SECRET = os.environ.get('ACCESS_SECRET')
 
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
