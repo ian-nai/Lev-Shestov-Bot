@@ -3,7 +3,6 @@ import io
 from random import sample
 from nltk.tokenize import sent_tokenize
 import tweepy
-import config
 import time
 from boto.s3.connection import S3Connection
 
