@@ -30,6 +30,6 @@ def wait_function():
     while True:
         tweet = sentence_split()
         api.update_status(tweet)
-        time.sleep(21600)
+        time.sleep(86400)
 
 wait_function()
